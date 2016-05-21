@@ -21,6 +21,52 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-570c2741ab469190"></script>
+
+	<style media="screen">
+	.align-left{ text-align:left;}
+	.align-right{text-align:right;}
+	.align-center{text-align:center;}
+	</style>
+
+	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>
+		tinymce.init({
+			selector:'p.description',
+			inline: true,
+			menubar: false,
+			plugins: "textcolor lists link image",
+  		toolbar: 'undo redo | forecolor backcolor | bold italic underline | myAlignLeft myAlignCenter myAlignRight myAlignJustify | bullist numlist | link image',
+			setup: function (editor) {
+				editor.addButton('myAlignLeft', {
+          icon: 'alignleft',
+          onclick: function() {
+            $('p.description').css('text-align', 'left');
+          }
+        });
+
+				editor.addButton('myAlignCenter', {
+          icon: 'aligncenter',
+          onclick: function() {
+            $('p.description').css('text-align', 'center');
+          }
+        });
+
+				editor.addButton('myAlignRight', {
+          icon: 'alignright',
+          onclick: function() {
+            $('p.description').css('text-align', 'right');
+          }
+        });
+
+				editor.addButton('myAlignJustify', {
+          icon: 'alignjustify',
+          onclick: function() {
+            $('p.description').css('text-align', 'justify');
+          }
+        });
+			}
+		});
+	</script>
 </head>
 <body>
   <!-- Nav -->
@@ -41,7 +87,7 @@
           <h1>9 dicas para presentear a Melhor Mãe do Mundo!</h1>
           <p class="description">Quando foi o último presente original, com a real intenção de surpreender que você deu para sua mãe, por exemplo? Temos uma missão: é hora de reconectar, nem que seja por um dia :)</p>
           <button type="button" class="btn btn-default visible-sm visible-xs dist-vert-30" data-toggle="modal" data-target="#myModal"><span class="icon-book dist-right"></span>Baixe agora!</button>
-           <img class="img-responsive" src="images/card.png" alt="Cartão"> 
+           <img class="img-responsive" src="images/card.png" alt="Cartão">
         </section>
         <div class="col-md-4 hidden-sm hidden-xs">
           <section class="header-form">
