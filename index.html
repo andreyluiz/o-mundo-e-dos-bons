@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>9 dicas para presentear a Melhor Mãe do Mundo!</title>
@@ -17,81 +17,212 @@
   <meta property="og:image:type" content="image/jpeg">
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/trash.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-570c2741ab469190"></script>
 
-	<style media="screen">
-	.align-left{ text-align:left;}
-	.align-right{text-align:right;}
-	.align-center{text-align:center;}
-	</style>
+  <style media="screen">
+  .align-left{ text-align:left;}
+  .align-right{text-align:right;}
+  .align-center{text-align:center;}
+  </style>
 
-	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script src="js/tinymce.min.js"></script>
   <script>
-		tinymce.init({
-			selector:'p.description',
-			inline: true,
-			menubar: false,
-			plugins: "textcolor lists link image",
-  		toolbar: 'undo redo | forecolor backcolor | bold italic underline | myAlignLeft myAlignCenter myAlignRight myAlignJustify | bullist numlist | link image',
-			setup: function (editor) {
-				editor.addButton('myAlignLeft', {
+    tinymce.init({
+      selector:'.editable',
+      inline: true,
+      menubar: false,
+      plugins: "textcolor lists link image",
+      toolbar: 'undo redo | forecolor backcolor | bold italic underline | myAlignLeft myAlignCenter myAlignRight myAlignJustify | bullist numlist | link image',
+      setup: function (editor) {
+        editor.addButton('myAlignLeft', {
           icon: 'alignleft',
           onclick: function() {
             $('p.description').css('text-align', 'left');
           }
         });
 
-				editor.addButton('myAlignCenter', {
+        editor.addButton('myAlignCenter', {
           icon: 'aligncenter',
           onclick: function() {
             $('p.description').css('text-align', 'center');
           }
         });
 
-				editor.addButton('myAlignRight', {
+        editor.addButton('myAlignRight', {
           icon: 'alignright',
           onclick: function() {
             $('p.description').css('text-align', 'right');
           }
         });
 
-				editor.addButton('myAlignJustify', {
+        editor.addButton('myAlignJustify', {
           icon: 'alignjustify',
           onclick: function() {
             $('p.description').css('text-align', 'justify');
           }
         });
-			}
-		});
-	</script>
+      }
+    });
+  </script>
 </head>
 <body>
   <!-- Nav -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img alt="Brand" src="images/brand.png">
+        <a class="navbar-brand logo" href="javascript:void(0);" title="Home">
+          <img src="images/logo-rd.png" alt="">
         </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li id="dashboard-menu"><a href="javascript:void(0);">Dashboard</a></li>
+          <li id="attract-menu" class="dropdown ">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Atrair<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:void(0);">Postagens em Mídias Sociais</a></li>
+              <li><a href="javascript:void(0);">Painel de palavras-chave</a></li>
+              <li><a href="javascript:void(0);">Otimização de Páginas (SEO)</a></li>
+              <li><a href="javascript:void(0);">Ferramentas para Blog</a></li>
+            </ul>
+          </li>
+          <li id="convert-menu" class="dropdown ">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Converter<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:void(0);">Landing Pages</a></li>
+              <li><a href="javascript:void(0);">Formulários</a></li>
+              <li><a href="javascript:void(0);">Campos personalizados</a></li>
+            </ul>
+          </li>
+          <li id="relate-menu" class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Relacionar<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:void(0);">Monitoramento de Mídias Sociais</a></li>
+              <li><a href="javascript:void(0);">Base de Leads</a></li>
+              <li><a href="javascript:void(0);">Lead Scoring <small>(Pro)</small></a></li>
+              <li><a href="javascript:void(0);">Lead Tracking <small>(Novo)</small></a></li>
+              <li><a href="javascript:void(0);">Segmentação de Leads</a></li>
+              <li><a href="javascript:void(0);">Automação de Marketing</a></li>
+              <li><a href="javascript:void(0);">Email</a></li>
+            </ul>
+          </li>
+          <li id="analyze-menu" class="dropdown ">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Analisar<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:void(0);">Marketing BI <small>(Enterprise)</small></a></li>
+              <li><a href="javascript:void(0);">Alcance</a></li>
+              <li><a href="javascript:void(0);">Visitas, Leads e Clientes</a></li>
+              <li><a href="javascript:void(0);">Fontes de Tráfego e Conversões</a></li>
+              <li><a href="javascript:void(0);">Páginas mais acessadas</a></li>
+              <li><a href="javascript:void(0);">Relatórios</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right navbar-account">
+          <li id="account-menu" class="dropdown">
+            <a class="navbar-account-link dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+              <span class="navbar-account-name" data-account-id="5565">Nome da conta</span><b class="caret"></b>
+            </a>          
+            <ul class="dropdown-menu account-menu">
+              <li class="">
+                <a class="evergage-click-settings" href="javascript:void(0)">Conta</a>
+                <span class="dropdown-client-id">ID: 5565-0000<span></span></span>
+              </li>
+              <li class="">
+                <a class="evergage-click-integrations" href="javascript:void(0)">Integrações</a></li>
+              <li class="dropdown-breaker"></li>
+              <li>
+                <a class="evergage-click-metodology" href="javascript:void(0)">Metodologia</a>
+              </li>
+              <li>
+                <a title="Central de Ajuda" target="_blank" class="evergage-click-help-center" href="javascript:void(0)">Central de Ajuda</a>
+              </li>
+              <li>
+                <a title="Resultados Digitais" target="_blank" class="evergage-click-learn" href="javascript:void(0)">Materiais Educativos</a>
+              </li>
+              <li class="dropdown-breaker"></li>
+              <li>
+                <a title="Marketplace" target="_blank" class="evergage-click-marketplace" href="javascript:void(0)">Marketplace</a>
+              </li>
+              <li>
+                <a title="Indique e Ganhe" target="_blank" class="evergage-click-indicate promoted-item" href="javascript:void(0)">Indique e Ganhe</a>
+              </li>
+              <li class="dropdown-buttons text-right">
+                <a class="evergage-click-change-account btn btn-sm btn-default change-account-link" data-target="#change_account" data-toggle="modal" href="javascript:void(0)">Trocar conta</a>
+                <a class="evergage-click-logout btn btn-sm btn-default logout-link" href="/logout">Sair</a>
+              </li>
+            </ul>
+          </li>
+          <li id="js-notices-list" class="dropdown">
+            <a href="javascript:void(0)" id="js-notices-icon-link" class="btn-notifications dropdown-toggle evergage-notifications-button" data-toggle="dropdown">
+              <span class="notifications-badge" id="js-notices-badge" style="display: none;"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-notifications">
+              <li class="notifications-header">Notificações</li>
+              <li class="single-notification no-notifications js-no-notices" style="">
+                <img src="//d3ndvx6e67vt0s.cloudfront.net/assets/icons/notifications/no_notifications-69ed4710f79bba6cd3664b335ad36484.png" alt="No notifications">
+                <p>Não há notificações.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Breadcrumbs -->
+  <div id="rd_breadcrumbs">
+    <div class="header-bar">
+      <div class="col-xs-6">
+        <a data-toggle="modal" href="#modal-landing-page-name">
+          <span class="item-name">Landing Page de Dia das Mães</span>
+          <span class="xicon-pencil" aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="col-xs-6">
+        <div class="nav-steps-wrapper">
+          <ol class="nav-steps" data-step="model">
+            <li class="">
+              <span><a class="nav-link" href="javascript:void(0);">Modelo</a></span>
+            </li>
+            <li class="active">
+              <span><a class="nav-link" href="javascript:void(0);">Edição</a></span>
+            </li>
+            <li class="">
+              <span><a class="nav-link" href="javascript:void(0);">Formulário</a></span>
+            </li>
+            <li class="">
+              <span><a class="nav-link" href="javascript:void(0);">Conversão</a></span>
+            </li>
+            <li class="">
+              <span><a class="nav-link" href="javascript:void(0);">Publicação</a></span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div id="logo">
+    <img alt="Brand" src="images/brand.png">
+  </div>
+
   <!-- Showcase -->
   <div class="container-fluid bg">
     <div class="container dist-vert-60">
       <div class="row">
         <section class="col-md-8 white">
-          <h1>9 dicas para presentear a Melhor Mãe do Mundo!</h1>
-          <p class="description">Quando foi o último presente original, com a real intenção de surpreender que você deu para sua mãe, por exemplo? Temos uma missão: é hora de reconectar, nem que seja por um dia :)</p>
+          <h1 class="editable">9 dicas para presentear a Melhor Mãe do Mundo!</h1>
+          <p class="description editable">Quando foi o último presente original, com a real intenção de surpreender que você deu para sua mãe, por exemplo? Temos uma missão: é hora de reconectar, nem que seja por um dia :)</p>
           <button type="button" class="btn btn-default visible-sm visible-xs dist-vert-30" data-toggle="modal" data-target="#myModal"><span class="icon-book dist-right"></span>Baixe agora!</button>
            <img class="img-responsive" src="images/card.png" alt="Cartão">
         </section>
         <div class="col-md-4 hidden-sm hidden-xs">
           <section class="header-form">
-            <h2>Preencha o formulário e receba o e-book grátis</h2>
+            <h2 class="editable">Preencha o formulário e receba o e-book grátis</h2>
           </section>
           <form role="form" class="box-form" action="https://www.rdstation.com.br/api/1.2/conversions" method="POST">
 
@@ -101,15 +232,12 @@
            <input type="hidden" name="client_id" id="client_id" value="" />
 
             <div class="form-group">
-              <label for="name">Nome*</label>
               <input type="text" class="form-control" id="name" name="nome">
             </div>
             <div class="form-group">
-              <label for="email">E-mail*</label>
               <input type="text" class="form-control" id="email" name="email">
             </div>
             <div class="form-group">
-              <label for="custom_fields_54510">Gênero*</label><br/>
               <label class="radio-inline paragraph">
                 <input type="radio" name="custom_fields[54510]" id="custom_fields_54510_Masculino" value="Masculino"> Masculino
               </label>
@@ -118,7 +246,6 @@
               </label>
             </div>
             <div class="form-group">
-              <label for="custom_fields_54511">Você costuma presentear com cartões?*</label><br/>
               <label class="radio-inline paragraph">
                 <input type="radio" name="custom_fields[54511]" id="custom_fields_54511_Sim" value="Sim"> Sim
               </label>
@@ -131,8 +258,8 @@
            <script type="text/javascript">
            function read_cookie(a){var b=a+"=";var c=document.cookie.split(";");for(var d=0;d<c.length;d++){var e=c[d];while(e.charAt(0)==" ")e=e.substring(1,e.length);if(e.indexOf(b)==0){return e.substring(b.length,e.length)}}return null}try{document.getElementById("c_utmz").value=read_cookie("__utmz"); document.getElementById("traffic_source").value=read_cookie("__trf.src");}catch(err){}
            </script>
-            <button type="submit" class="btn btn-default"><span class="icon-book dist-right"></span>Baixe agora!</button>
-            <p class="no-spam">Prometemos não enviar SPAM :)</p>
+            <button type="submit" class="btn btn-download-1"><span class="icon-book dist-right"></span>Baixe agora!</button>
+            <p class="no-spam editable">Prometemos não enviar SPAM :)</p>
           </form>
         </div>
       </div>
@@ -145,15 +272,15 @@
         <div class="advantages text-center">
           <section class="col-md-4 col-sm-4">
             <span class="icon-gifts"></span>
-            <h3>Presenteie sua mãe com originalidade!</h3>
+            <h3 class="editable">Presenteie sua mãe com originalidade!</h3>
           </section>
           <section class="col-md-4 col-sm-4">
             <span class="icon-hearth"></span>
-            <h3>Entregue emoção e reviva momentos ótimos!</h3>
+            <h3 class="editable">Entregue emoção e reviva momentos ótimos!</h3>
           </section>
           <section class="col-md-4 col-sm-4">
             <span class="icon-family"></span>
-            <h3>Marque mais um momento na vida dela!</h3>
+            <h3 class="editable">Marque mais um momento na vida dela!</h3>
           </section>
         </div>
       </div>
@@ -163,7 +290,7 @@
   <div class="footer container-fluid text-center">
     <div class="row">
       <div class="col-md-12 dist-vert-30">
-        <small>Feito com ♥ por O mundo é dos bons</small>
+        <small class="editable">Feito com ♥ por O mundo é dos bons</small>
       </div>
     </div>
   </div>
@@ -215,9 +342,22 @@
            <script type="text/javascript">
            function read_cookie(a){var b=a+"=";var c=document.cookie.split(";");for(var d=0;d<c.length;d++){var e=c[d];while(e.charAt(0)==" ")e=e.substring(1,e.length);if(e.indexOf(b)==0){return e.substring(b.length,e.length)}}return null}try{document.getElementById("c_utmz").value=read_cookie("__utmz"); document.getElementById("traffic_source").value=read_cookie("__trf.src");}catch(err){}
            </script>
-          <button type="submit" class="btn btn-default"><span class="icon-book dist-right"></span>Baixe agora!</button>
+          <button type="submit" class="btn btn-download-1"><span class="icon-book dist-right"></span>Baixe agora!</button>
           <p class="no-spam">Prometemos não enviar SPAM :)</p>
         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions-footer next_steps-container control">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 text-left">
+          <button type="button" class="btn btn-info" id="loadLandingPagePreview"> Pré-visualizar </button>
+        </div>
+        <div class="col-xs-6">
+          <input type="submit" name="commit" value="Salvar" id="save-btn" class="btn btn-default " data-disable-with="Aguarde" data-loading-text="Aguarde">
+          <input type="submit" name="commit" value="Salvar e avançar" id="save-and-next-btn" class="btn btn-primary " data-disable-with="Aguarde">
         </div>
       </div>
     </div>
